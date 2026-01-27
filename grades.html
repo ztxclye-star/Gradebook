@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grades</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Grades — 2025–2026</h2>
+
+<div class="class">
+  <h3>Anatomy & Physiology Honors</h3>
+  <button onclick="openQuarter('ap',1)">1st 9 Weeks: A</button>
+  <button onclick="openQuarter('ap',2)">2nd 9 Weeks: A</button>
+  <button onclick="openQuarter('ap',3)">3rd 9 Weeks: A</button>
+</div>
+
+<div class="class">
+  <h3>Probability & Statistics Honors</h3>
+  <button onclick="openQuarter('math',1)">1st: A</button>
+  <button onclick="openQuarter('math',2)">2nd: A</button>
+  <button onclick="openQuarter('math',3)">3rd: A</button>
+</div>
+
+<div class="class">
+  <h3>AICE Spanish</h3>
+  <button onclick="openQuarter('spanish',1)">1st: A</button>
+  <button onclick="openQuarter('spanish',2)">2nd: A</button>
+  <button onclick="openQuarter('spanish',3)">3rd: A</button>
+</div>
+
+<div class="class">
+  <h3>AICE Psychology</h3>
+  <button onclick="openQuarter('psych',1)">1st: A</button>
+  <button onclick="openQuarter('psych',2)">2nd: B</button>
+  <button onclick="openQuarter('psych',3)">3rd: A</button>
+</div>
+
+<div id="assignments"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
