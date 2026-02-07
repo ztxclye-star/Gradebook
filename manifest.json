@@ -1,0 +1,15 @@
+{
+  "name": "Gradebook",
+  "short_name": "Grades",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#2d9cdb",
+  "theme_color": "#2d9cdb",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3135/3135755.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
