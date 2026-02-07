@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Gradebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{margin:0;font-family:Arial;background:#f4f6f8;}
+.header{background:#2d9cdb;color:white;padding:14px;text-align:center;font-size:20px;font-weight:bold;}
+.container{display:flex;min-height:100vh;}
+.sidebar{width:230px;background:#e9f1f7;padding:15px;}
+.sidebar button{width:100%;padding:10px;margin-bottom:8px;border:none;background:white;border-radius:6px;cursor:pointer;text-align:left;}
+.main{flex:1;padding:20px;}
+
+.grade{background:white;padding:15px;margin-bottom:14px;border-radius:8px;cursor:pointer;}
+.class-title{font-weight:bold;}
+.teacher{font-size:13px;color:#666;margin-bottom:8px;}
+.weeks{display:flex;gap:10px;margin-bottom:10px;}
+.badge{padding:8px 12px;border-radius:6px;font-weight:bold;background:#c8f0d2;color:#1b7f3a;}
+.badge.b{background:#d9f2e3;color:#2f6f4e;}
+
+.assignments{display:none;margin-top:10px;font-size:14px;}
+.assignments div{padding:6px 0;border-bottom:1px solid #eee;}
+</style>
+</head>
+
+<body>
+<div class="header">Student Grades</div>
+
+<div class="container">
+<div class="sidebar">
+<button onclick="showGrades()">📊 Grades</button>
+</div>
+
+<div class="main">
+
+<h2>2025–2026 • Grades</h2>
+
+<script>
+function toggle(id){
+  let e=document.getElementById(id);
+  e.style.display = e.style.display=="block"?"none":"block";
+}
+</script>
+
+<!-- TEMPLATE FUNCTION NOTE:
+All classes have 5 tests, 2 projects, 3 classwork grades -->
+
+<!-- ANATOMY -->
+<div class="grade" onclick="toggle('a1')">
+<div class="class-title">Anatomy & Physiology Honors</div>
+<div class="teacher">Lima, Ariel</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge">A</span>
+</div>
+
+<div id="a1" class="assignments">
+<div>Test 1 — 95%</div>
+<div>Test 2 — 94%</div>
+<div>Test 3 — 96%</div>
+<div>Test 4 — 93%</div>
+<div>Test 5 — 97%</div>
+<div>Project 1 — 98%</div>
+<div>Project 2 — 97%</div>
+<div>Classwork — 100%</div>
+<div>Classwork — 99%</div>
+<div>Classwork — 98%</div>
+</div>
+</div>
+
+<!-- ENGLISH -->
+<div class="grade" onclick="toggle('a2')">
+<div class="class-title">AICE English Literature</div>
+<div class="teacher">Pujol, Denise</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge">A</span>
+</div>
+
+<div id="a2" class="assignments">
+<div>Test 1 — 94%</div>
+<div>Test 2 — 95%</div>
+<div>Test 3 — 96%</div>
+<div>Test 4 — 93%</div>
+<div>Test 5 — 97%</div>
+<div>Project 1 — 98%</div>
+<div>Project 2 — 96%</div>
+<div>Classwork — 100%</div>
+<div>Classwork — 98%</div>
+<div>Classwork — 97%</div>
+</div>
+</div>
+
+<!-- GLOBAL -->
+<div class="grade" onclick="toggle('a3')">
+<div class="class-title">AICE Global Perspectives</div>
+<div class="teacher">Kelly, Michelle</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge">A</span>
+</div>
+
+<div id="a3" class="assignments">
+<div>Test 1 — 95%</div>
+<div>Test 2 — 94%</div>
+<div>Test 3 — 96%</div>
+<div>Test 4 — 95%</div>
+<div>Test 5 — 97%</div>
+<div>Project 1 — 99%</div>
+<div>Project 2 — 98%</div>
+<div>Classwork — 100%</div>
+<div>Classwork — 98%</div>
+<div>Classwork — 97%</div>
+</div>
+</div>
+
+<!-- ART -->
+<div class="grade" onclick="toggle('a4')">
+<div class="class-title">Three-Dimensional Studio Art</div>
+<div class="teacher">Seijas Luquez, Begona</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge">A</span>
+</div>
+
+<div id="a4" class="assignments">
+<div>Test 1 — 95%</div>
+<div>Test 2 — 96%</div>
+<div>Test 3 — 94%</div>
+<div>Test 4 — 97%</div>
+<div>Test 5 — 98%</div>
+<div>Project 1 — 100%</div>
+<div>Project 2 — 99%</div>
+<div>Classwork — 100%</div>
+<div>Classwork — 99%</div>
+<div>Classwork — 98%</div>
+</div>
+</div>
+
+<!-- HISTORY -->
+<div class="grade" onclick="toggle('a5')">
+<div class="class-title">AICE United States History</div>
+<div class="teacher">Campos, Jonas</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge">A</span>
+</div>
+
+<div id="a5" class="assignments">
+<div>Test 1 — 95%</div>
+<div>Test 2 — 96%</div>
+<div>Test 3 — 94%</div>
+<div>Test 4 — 97%</div>
+<div>Test 5 — 95%</div>
+<div>Project 1 — 98%</div>
+<div>Project 2 — 99%</div>
+<div>Classwork — 100%</div>
+<div>Classwork — 99%</div>
+<div>Classwork — 98%</div>
+</div>
+</div>
+
+<!-- MATH (B THIRD NINE WEEKS) -->
+<div class="grade" onclick="toggle('a6')">
+<div class="class-title">Probability & Statistics Honors</div>
+<div class="teacher">Espinosa, Manuel</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge b">B</span>
+</div>
+
+<div id="a6" class="assignments">
+<div>Test 1 — 86%</div>
+<div>Test 2 — 88%</div>
+<div>Test 3 — 85%</div>
+<div>Test 4 — 87%</div>
+<div>Test 5 — 89%</div>
+<div>Project 1 — 90%</div>
+<div>Project 2 — 88%</div>
+<div>Classwork — 92%</div>
+<div>Classwork — 90%</div>
+<div>Classwork — 91%</div>
+</div>
+</div>
+
+<!-- SPANISH -->
+<div class="grade" onclick="toggle('a7')">
+<div class="class-title">AICE Spanish Language</div>
+<div class="teacher">Cabra, Maria</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge">A</span>
+</div>
+
+<div id="a7" class="assignments">
+<div>Test 1 — 95%</div>
+<div>Test 2 — 96%</div>
+<div>Test 3 — 94%</div>
+<div>Test 4 — 97%</div>
+<div>Test 5 — 98%</div>
+<div>Project 1 — 99%</div>
+<div>Project 2 — 98%</div>
+<div>Classwork — 100%</div>
+<div>Classwork — 99%</div>
+<div>Classwork — 98%</div>
+</div>
+</div>
+
+<!-- PSYCH -->
+<div class="grade" onclick="toggle('a8')">
+<div class="class-title">AICE Psychology</div>
+<div class="teacher">Kelly, Michelle</div>
+<div class="weeks">
+<span class="badge">A</span>
+<span class="badge">A</span>
+<span class="badge">A</span>
+</div>
+
+<div id="a8" class="assignments">
+<div>Test 1 — 95%</div>
+<div>Test 2 — 96%</div>
+<div>Test 3 — 94%</div>
+<div>Test 4 — 97%</div>
+<div>Test 5 — 98%</div>
+<div>Project 1 — 99%</div>
+<div>Project 2 — 98%</div>
+<div>Classwork — 100%</div>
+<div>Classwork — 99%</div>
+<div>Classwork — 98%</div>
+</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
